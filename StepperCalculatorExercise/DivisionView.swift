@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DivisionView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        CalculationView(operation: { firstNumber, secondNumber in
+            return firstNumber / secondNumber
+        }, symbol: "÷")
     }
 }
 

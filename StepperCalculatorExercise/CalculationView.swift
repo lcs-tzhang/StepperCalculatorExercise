@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CalculationView: View {
-    let operation:(Int, Int) -> Int
+    
+    let operation: (Int, Int) -> Int
     let symbol: String
     
     @State var firstNumber: Int = 1
@@ -20,37 +21,51 @@ struct CalculationView: View {
     
     var body: some View {
         VStack {
+            
+            
             Spacer()
             
-            HStack(alignment: .top) {
-                Text("\(firstNumber)")
-                    .font(.system(size: 96))
-                
-                Text(symbol)
-                    .font(.system(size: 44))
-                
-                Text("\(secondNumber)")
-                    .font(.system(size: 96))
-                
-                Text("=")
-                    .font(.system(size: 96))
-                
-                Text("\(result)")
-                    .font(.system(size: 96))
-            }
-            
-            Stepper(value: $firstNumber) {
+            VStack(alignment: .leading) {
                 Text("select first number")
+                    .font(.headline)
+                HStack {
+                    Text("\(firstNumber)")
+                        .font(.system(size: 64))
+                    Spacer()
+                    Stepper("", value: $firstNumber)
+                }
             }
             
-            Stepper(value: $secondNumber) {
+            Text(symbol)
+                .font(.system(size: 64))
+                .padding()
+            
+            Spacer()
+            
+            VStack(alignment: .leading) {
                 Text("select second number")
+                    .font(.headline)
+                HStack {
+                    Text("\(secondNumber)")
+                        .font(.system(size: 64))
+                    Spacer()
+                    Stepper("", value: $secondNumber)
+                }
+                
             }
+            Spacer()
+            
+            Text("\(result)")
+                .font(.system(size: 96))
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding(.trailing)
+                .padding()
             
             Spacer()
         }
         .padding()
     }
 }
+
 
 
