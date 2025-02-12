@@ -9,6 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        TabView {
+            AdditionView()
+                .tabItem {
+                    Image(systemName: "plus")
+                    Text("Plus")
+                }
+            SubtractionView()
+                .tabItem {
+                    Image(systemName: "minus")
+                    Text("Minus")
+                }
+            MultiplicationView()
+                .tabItem {
+                    Image(systemName: "xmark")
+                    Text("Multiply")
+                }
+            DivisionView()
+                .tabItem {
+                    Image(systemName: "divide")
+                    Text("Divide")
+                }
+        }
+    }
+}
+    var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
@@ -17,7 +42,7 @@ struct ContentView: View {
         }
         .padding()
     }
-}
+
 
 #Preview {
     ContentView()
