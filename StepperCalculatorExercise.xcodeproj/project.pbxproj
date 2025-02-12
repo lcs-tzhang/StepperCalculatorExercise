@@ -11,6 +11,7 @@
 		517500022D5CE5F500CCB0D3 /* SubtractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517500012D5CE5F500CCB0D3 /* SubtractionView.swift */; };
 		517500042D5CE61C00CCB0D3 /* MultiplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517500032D5CE61C00CCB0D3 /* MultiplicationView.swift */; };
 		517500062D5CE63D00CCB0D3 /* DivisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517500052D5CE63D00CCB0D3 /* DivisionView.swift */; };
+		517500082D5CE7C400CCB0D3 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517500072D5CE7C400CCB0D3 /* CalculationView.swift */; };
 		5175FFFA2D5CE50B00CCB0D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5175FFF42D5CE50B00CCB0D3 /* Preview Assets.xcassets */; };
 		5175FFFB2D5CE50B00CCB0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5175FFF62D5CE50B00CCB0D3 /* Assets.xcassets */; };
 		5175FFFC2D5CE50B00CCB0D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175FFF72D5CE50B00CCB0D3 /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 		517500012D5CE5F500CCB0D3 /* SubtractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionView.swift; sourceTree = "<group>"; };
 		517500032D5CE61C00CCB0D3 /* MultiplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationView.swift; sourceTree = "<group>"; };
 		517500052D5CE63D00CCB0D3 /* DivisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionView.swift; sourceTree = "<group>"; };
+		517500072D5CE7C400CCB0D3 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 		5175FFE32D5CE3BB00CCB0D3 /* StepperCalculatorExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepperCalculatorExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5175FFF42D5CE50B00CCB0D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5175FFF62D5CE50B00CCB0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		5175FFF92D5CE50B00CCB0D3 /* StepperCalculatorExercise */ = {
 			isa = PBXGroup;
 			children = (
+				517500072D5CE7C400CCB0D3 /* CalculationView.swift */,
 				5175FFF72D5CE50B00CCB0D3 /* ContentView.swift */,
 				5175FFF82D5CE50B00CCB0D3 /* StepperCalculatorExerciseApp.swift */,
 				5175FFFF2D5CE5C800CCB0D3 /* AdditionView.swift */,
@@ -156,6 +159,7 @@
 				517500062D5CE63D00CCB0D3 /* DivisionView.swift in Sources */,
 				517500042D5CE61C00CCB0D3 /* MultiplicationView.swift in Sources */,
 				517500022D5CE5F500CCB0D3 /* SubtractionView.swift in Sources */,
+				517500082D5CE7C400CCB0D3 /* CalculationView.swift in Sources */,
 				5175FFFD2D5CE50B00CCB0D3 /* StepperCalculatorExerciseApp.swift in Sources */,
 				517500002D5CE5C800CCB0D3 /* AdditionView.swift in Sources */,
 			);
