@@ -42,6 +42,11 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		517500982D6A4E0C00CCB0D3 /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 		5175FFF92D5CE50B00CCB0D3 /* StepperCalculatorExercise */ = {
 			isa = PBXGroup;
 			children = (
+				517500982D6A4E0C00CCB0D3 /* Model */,
 				517500952D6A4C3A00CCB0D3 /* ViewModels */,
 				517500942D6A4C3100CCB0D3 /* Views */,
 				517500072D5CE7C400CCB0D3 /* CalculationView.swift */,
@@ -115,6 +121,7 @@
 			fileSystemSynchronizedGroups = (
 				517500942D6A4C3100CCB0D3 /* Views */,
 				517500952D6A4C3A00CCB0D3 /* ViewModels */,
+				517500982D6A4E0C00CCB0D3 /* Model */,
 			);
 			name = StepperCalculatorExercise;
 			packageProductDependencies = (
