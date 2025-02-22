@@ -13,7 +13,7 @@ class CalculationViewModel {
     //MARK: Functions
     //save new results
     func saveResult (){
-        let newResult = CalculationResult(firstNumber: firstNumber, secondNumber: secondNumber, result: result, symbol: symbol)
+        let newResult = CalculationResult(firstNumber: firstNumber, secondNumber: secondNumber, result: result =, symbol: symbol)
                 resultHistory.insert(newResult, at: 0)
     }
 }

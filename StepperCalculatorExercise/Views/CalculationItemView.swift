@@ -5,7 +5,7 @@
 //  Created by xinyu zhang on 2025-02-22.
 //
 
-import Foundation
+import SwiftUI
 
 struct CalculationItemView : View{
     let result: CalculationResult
@@ -18,4 +18,10 @@ struct CalculationItemView : View{
     }
 }
 
-
+#Preview {
+    List {
+        CalculationItemView(result: CalculationResult(firstNumber: 3, secondNumber: 2, result: 5, symbol: "+"))
+        CalculationItemView(result: CalculationResult(firstNumber: 4, secondNumber: 5, result: 20, symbol: "×"))
+    }
+    .listStyle(.plain)
+}

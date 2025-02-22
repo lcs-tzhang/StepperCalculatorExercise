@@ -14,20 +14,17 @@ struct CalculationView: View {
     
     @State var firstNumber: Int = 1
     @State var secondNumber: Int = 1
-    @State var viewModel = CalculationViewModel()
     
-    var result: Int {
-        return operation(firstNumber, secondNumber)
-    }
+    // ViewModel to handle history and calculations
+    @State var viewModel = CalculationViewModel()
     
     var body: some View {
         VStack {
-            
-            
             Spacer()
             
+            // INPUT for first number
             VStack(alignment: .leading) {
-                Text("select first number")
+                Text("Select first number")
                     .font(.headline)
                 HStack {
                     Text("\(firstNumber)")
@@ -37,14 +34,16 @@ struct CalculationView: View {
                 }
             }
             
+            // Operation symbol
             Text(symbol)
                 .font(.system(size: 64))
                 .padding()
             
             Spacer()
             
+            // INPUT for second number
             VStack(alignment: .leading) {
-                Text("select second number")
+                Text("Select second number")
                     .font(.headline)
                 HStack {
                     Text("\(secondNumber)")
@@ -52,31 +51,42 @@ struct CalculationView: View {
                     Spacer()
                     Stepper("", value: $secondNumber)
                 }
-                
             }
+            
             Spacer()
             
-            Text("\(result)")
+            // Display result
+            Text("\(operation(firstNumber, secondNumber))")
                 .font(.system(size: 96))
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(.trailing)
                 .padding()
             
+            // Save button
+            Button {
+                viewModel.saveResult
+            } label: {
+                Text("Save")
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.bottom)
+            
+            // History title
+            HStack {
+                Text("History")
+                    .bold()
+                Spacer()
+            }
+            .padding(.vertical)
+            
+            // Display history
+            List(viewModel.resultHistory) { result in
+                CalculationItemView(result: result)
+            }
+            .listStyle(.plain)
+            
             Spacer()
         }
         .padding()
-        
-        Button {
-            viewModel.saveResult(firstNumber: firstNumber, secondNumber: secondNumber, result: operation(firstNumber, secondNumber), symbol: symbol)
-        } label: {
-            Text("Save")
-        }
-        .buttonStyle(.borderedProminent)
-        .padding(.bottom)
-        
-        
     }
 }
-
-
-
