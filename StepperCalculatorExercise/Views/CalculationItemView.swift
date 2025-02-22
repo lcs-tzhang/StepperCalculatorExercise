@@ -10,6 +10,12 @@ import Foundation
 struct CalculationItemView : View{
     let result: CalculationResult
     var body: some View {
-        
+        HStack{
+            Text("\(result.firstNumber)\(result.symbol)\(result.secondNumber) = \(result.result)")
+                .font(.largeTitle)
+            Spacer()
+        }
     }
 }
+
+
