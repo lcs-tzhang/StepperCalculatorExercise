@@ -64,7 +64,8 @@ struct CalculationView: View {
             
             // Save button
             Button {
-                viewModel.saveResult
+                viewModel.saveResult(firstNumber: firstNumber, secondNumber: secondNumber, result: operation(firstNumber, secondNumber), symbol: symbol)
+                
             } label: {
                 Text("Save")
             }
