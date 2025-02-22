@@ -14,6 +14,7 @@ struct CalculationView: View {
     
     @State var firstNumber: Int = 1
     @State var secondNumber: Int = 1
+    @State var viewModel = CalculationViewModel()
     
     var result: Int {
         return operation(firstNumber, secondNumber)
@@ -64,6 +65,16 @@ struct CalculationView: View {
             Spacer()
         }
         .padding()
+        
+        Button {
+            viewModel.saveResult(firstNumber: firstNumber, secondNumber: secondNumber, result: operation(firstNumber, secondNumber), symbol: symbol)
+        } label: {
+            Text("Save")
+        }
+        .buttonStyle(.borderedProminent)
+        .padding(.bottom)
+        
+        
     }
 }
 
